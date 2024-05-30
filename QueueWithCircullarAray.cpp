@@ -63,6 +63,41 @@ class queues {
         }
 
         }
+    void display() {
+
+        int FRONT_Position = FRONT;
+        int REAR_Position = REAR;
+         
+         // cek apakah antrian kosong
+         if (FRONT_Position == -1) {
+            cout << "queue is empty\n";
+            return;
+         }
+           cout << "\nElemen is queue are...\n";
+     
+     // jika FRONT <= REAR, iterasi dari FRONT hingga REAR
+     if (FRONT_Position <= REAR_Position) {
+        while(FRONT_Position <= REAR_Position) {
+            cout << queue_array[FRONT_Position] <<" ";
+            FRONT_Position++;
+        }
+        cout << endl;
+     }
+         else {
+            //Jika FRONT > REAR, iterasi dari FRONT hingga akhir array
+            while(FRONT_Position <= max -1) {
+                cout << queue_array[FRONT_Position] << "  ";
+                FRONT_Position++;
+            }
+            FRONT_Position = 0;
+            // Iterasi dari awalarray hingga REAR 
+            while (FRONT_Position <= REAR_Position) {
+                cout << queue_array[FRONT_Position] << "  ";
+                FRONT_Position++;
+            }
+                cout << endl;
+         }
+    }
             
 };
     
