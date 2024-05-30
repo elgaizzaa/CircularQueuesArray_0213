@@ -11,8 +11,11 @@ class queues {
           queues() {
             FRONT =-1;
             REAR =-1;    
+        } 
+        void insert(){
+             int num;
         }
+         
+              
 
-    };
-
-  
+    }; 
